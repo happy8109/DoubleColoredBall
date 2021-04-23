@@ -213,8 +213,6 @@ namespace DoubleColoredBall
             }
             return ResponseByte;
         }
-
-
         #endregion
 
         #region SetRequest
@@ -412,8 +410,6 @@ namespace DoubleColoredBall
                 request.Proxy = item.WebProxy;
             }
         }
-
-
         #endregion
 
         #region private main
@@ -440,7 +436,6 @@ namespace DoubleColoredBall
         }
         #endregion
     }
-
 
     /// <summary>
     /// Http请求参考类
