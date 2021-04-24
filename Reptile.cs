@@ -22,8 +22,6 @@ namespace DoubleColoredBall
                 Referer = "http://www.cwl.gov.cn/kjxx/ssq/kjgg/",
                 ResultCookieType = ResultCookieType.CookieCollection,
                 ResultType = ResultType.String
-               
-                
             };
             
             HttpResult httpResult = httpHelper.GetHtml(httpItem);
