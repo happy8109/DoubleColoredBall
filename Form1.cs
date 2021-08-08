@@ -23,5 +23,10 @@ namespace DoubleColoredBall
             Reptile reptile = new Reptile();
             this.tbResult.Text = reptile.GetHtml();
         }
+
+        private void btnCreateDB_Click(object sender, EventArgs e)
+        {
+            DBdal.CreateDB();
+        }
     }
 }

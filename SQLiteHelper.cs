@@ -5,17 +5,19 @@ using System.Data.SQLite;
 
 namespace DoubleColoredBall
 {
-    public sealed class SQLiteHelper
+    public class SQLiteHelper
     {
+        private string dataSource = string.Empty;
+
         private string connectionString = string.Empty;
 
         public SQLiteHelper()
         {
         }
 
-        public SQLiteHelper(string datasource, string password)
+        public SQLiteHelper(string datasource)
         {
-            SetConnectionString(datasource, password);
+            SetConnectionString(datasource);
         }
 
         /// <summary>
@@ -24,9 +26,11 @@ namespace DoubleColoredBall
         /// <param name="datasource">数据源。</param>
         /// <param name="password">密码。</param>
         /// <param name="version">版本号（缺省为3）。</param>
-        public void SetConnectionString(string datasource, string password, int version = 3)
+        public void SetConnectionString(string datasource, int version = 3)
         {
-            connectionString = string.Format("Data Source={0};Version={1};password={2}", datasource, version, password);
+            this.dataSource = datasource;
+
+            connectionString = string.Format("Data Source={0};Version={1};password={2}", datasource, version);
         }
 
         /// <summary>
@@ -35,7 +39,10 @@ namespace DoubleColoredBall
         /// <exception cref="Exception"></exception>
         public void CreateDB()
         {
-            try { SQLiteConnection.CreateFile(connectionString); }
+            try
+            {
+                SQLiteConnection.CreateFile(dataSource);
+            }
             catch (Exception e1)
             {
                 System.Diagnostics.Debug.WriteLine("SQLiteHelper CreateDB Exception: " + e1.Message);
