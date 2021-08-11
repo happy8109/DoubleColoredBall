@@ -30,7 +30,7 @@ namespace DoubleColoredBall
         {
             this.dataSource = datasource;
 
-            connectionString = string.Format("Data Source={0};Version={1};password={2}", datasource, version);
+            connectionString = string.Format("Data Source={0}", datasource, version);
         }
 
         /// <summary>

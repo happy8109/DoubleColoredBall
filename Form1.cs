@@ -28,5 +28,10 @@ namespace DoubleColoredBall
         {
             DBdal.CreateDB();
         }
+
+        private void btnCreateTable_Click(object sender, EventArgs e)
+        {
+            DBdal.CreateTable();
+        }
     }
 }

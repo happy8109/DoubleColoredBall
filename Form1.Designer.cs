@@ -32,6 +32,7 @@ namespace DoubleColoredBall
             this.btnStart = new System.Windows.Forms.Button();
             this.tbResult = new System.Windows.Forms.TextBox();
             this.btnCreateDB = new System.Windows.Forms.Button();
+            this.btnCreateTable = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnStart
@@ -62,11 +63,22 @@ namespace DoubleColoredBall
             this.btnCreateDB.UseVisualStyleBackColor = true;
             this.btnCreateDB.Click += new System.EventHandler(this.btnCreateDB_Click);
             // 
+            // btnCreateTable
+            // 
+            this.btnCreateTable.Location = new System.Drawing.Point(375, 13);
+            this.btnCreateTable.Name = "btnCreateTable";
+            this.btnCreateTable.Size = new System.Drawing.Size(75, 23);
+            this.btnCreateTable.TabIndex = 3;
+            this.btnCreateTable.Text = "CreateTable";
+            this.btnCreateTable.UseVisualStyleBackColor = true;
+            this.btnCreateTable.Click += new System.EventHandler(this.btnCreateTable_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnCreateTable);
             this.Controls.Add(this.btnCreateDB);
             this.Controls.Add(this.tbResult);
             this.Controls.Add(this.btnStart);
@@ -82,6 +94,7 @@ namespace DoubleColoredBall
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.TextBox tbResult;
         private System.Windows.Forms.Button btnCreateDB;
+        private System.Windows.Forms.Button btnCreateTable;
     }
 }
 
