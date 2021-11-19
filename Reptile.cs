@@ -17,9 +17,9 @@ namespace DoubleColoredBall
             HttpItem httpItem = new HttpItem()
             {
                 Host = "www.cwl.gov.cn",
-                URL = "http://www.cwl.gov.cn/cwl_admin/kjxx/findDrawNotice?name=ssq&issueCount=30",
+                URL = "http://www.cwl.gov.cn/ygkj/wqkjgg/ssq/",
                 Accept = "application/json, text/javascript, */*; q=0.01",
-                Referer = "http://www.cwl.gov.cn/kjxx/ssq/kjgg/",
+                Referer = "http://www.cwl.gov.cn/ygkj/wqkjgg/ssq/",
                 ResultCookieType = ResultCookieType.CookieCollection,
                 ResultType = ResultType.String
             };
